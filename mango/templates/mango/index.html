@@ -1,0 +1,13 @@
+<html>
+{% if latest_list %}
+    <ul>
+    {% for item  in latest_list %}
+        <li>{{ poll.question }}</li>
+        <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
+<a href="{% url 'mango:index' %}">go to hello</a>
+</html>
