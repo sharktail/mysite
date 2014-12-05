@@ -1,4 +1,6 @@
 <html>
+{%load staticfiles%}
+
 {% if latest_list %}
     <ul>
     {% for item  in latest_list %}
@@ -10,4 +12,6 @@
     <p>No items are available.</p>
 {% endif %}
 <a href="{% url 'mango:index' %}">go to hello</a>
+{{static}}
+<img src="{% static "mango/mango.jpeg" %}" alt="My Image"/>
 </html>
