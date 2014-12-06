@@ -4,7 +4,6 @@
 {% if latest_list %}
     <ul>
     {% for item  in latest_list %}
-        <li>{{ poll.question }}</li>
         <li>{{ item }}</li>
     {% endfor %}
     </ul>
@@ -12,7 +11,27 @@
     <p>No items are available.</p>
 {% endif %}
 <a href="{% url 'mango:index' %}">go to hello</a>
-<div>{{STATIC_URL}}</div>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me for Date and Time.
+</button>
+<p id="demo">It will be printed here.</p>
+
+<br>
+<button type="button" onclick="myFunction()">Click Me!
+</button>
+<p id="fun">Change the text</p>
+<script>
+function myFunction()
+{
+    document.getElementById("fun").innerHTML = "Hello Javascript";
+}
+</script>
+
+<script src="{{STATIC_URL}}mango/js/custom.js"></script>
+<button type="button" onclick="customJS()">CustomId</button>
+<p id="customId">I am customID</p>
+
 <img src = "{% static "mango/images/mango.jpeg" %}" alt="My Image"/>
 <img src="{{STATIC_URL}}mango/images/mango.jpeg"/> 
 </html>
