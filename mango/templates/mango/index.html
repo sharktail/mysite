@@ -12,6 +12,7 @@
     <p>No items are available.</p>
 {% endif %}
 <a href="{% url 'mango:index' %}">go to hello</a>
-{{static}}
-<img src="{% static "mango/mango.jpeg" %}" alt="My Image"/>
+<div>{{STATIC_URL}}</div>
+<img src = "{% static "mango/images/mango.jpeg" %}" alt="My Image"/>
+<img src="{{STATIC_URL}}mango/images/mango.jpeg"/> 
 </html>
