@@ -6,7 +6,8 @@
 <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}mango/css/basics.css">
 </head>
 
-<h1 style="background-color: lightblue;">
+<h1>
+<img src="{{STATIC_URL}}mango/images/mango.jpeg"/> 
 {% if latest_list %}
     <ul>
     {% for item  in latest_list %}
@@ -44,5 +45,4 @@ function myFunction()
 <p id="customId">I am customID</p>
 
 <img src = "{% static "mango/images/mango.jpeg" %}" alt="My Image"/>
-<img src="{{STATIC_URL}}mango/images/mango.jpeg"/> 
 </html>
