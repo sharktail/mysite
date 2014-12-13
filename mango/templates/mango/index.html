@@ -1,6 +1,12 @@
+<!DOCTYPE html>
 <html>
 {%load staticfiles%}
+<script src="{{STATIC_URL}}mango/js/custom.js"></script>
+<head>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}mango/css/basics.css">
+</head>
 
+<h1 style="background-color: lightblue;">
 {% if latest_list %}
     <ul>
     {% for item  in latest_list %}
@@ -10,6 +16,10 @@
 {% else %}
     <p>No items are available.</p>
 {% endif %}
+</h1>
+
+<div class="menu"> Is this where I should put the list? </div>
+
 <a href="{% url 'mango:index' %}">go to hello</a>
 <button type="button"
 onclick="document.getElementById('demo').innerHTML = Date()">
@@ -28,7 +38,7 @@ function myFunction()
 }
 </script>
 
-<script src="{{STATIC_URL}}mango/js/custom.js"></script>
+
 <button type="button" onclick="customJS()">CustomId</button>
 <p id="customId">I am customID</p>
 
