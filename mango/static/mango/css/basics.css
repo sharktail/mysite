@@ -13,11 +13,12 @@ p {
 }
 
 .menu {
-    width: 150px;
-    height: 600px;
-    float: left;
-    padding: 25px;
-    border: 25px grey;
+    width: 600px;
+    height: 15px;
+    position: absolute;
+    top: 3px;
+    padding: 15px;
+    border: 25px;
     box-shadow: 10px 10px 5px #888888;
-    margin: 0px;
+    margin: 5px;
 }
